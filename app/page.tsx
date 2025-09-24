@@ -8,31 +8,34 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className="relative overflow-hidden">
-      {/* Overlay */}
-      <div className="fixed inset-0 bg-black/30" style={{ zIndex: 0 }} />
+      {/* Background */}
+      <div className="fixed inset-0 bg-black/20" style={{ zIndex: 0 }} />
 
       {/* Hero Section */}
-      <section className="relative z-10 min-h-screen flex flex-col items-center justify-center px-4" style={{ zIndex: 1 }}>
-        <div className="flex flex-col items-center max-w-4xl mx-auto text-center">
+      <section className="relative z-10 min-h-screen flex flex-col items-center justify-center px-4 py-12 md:py-24" style={{ zIndex: 2 }}>
+        <div className="flex flex-col items-center max-w-5xl mx-auto text-center">
           {/* Logo and Brand */}
           <motion.div
-            initial={{ opacity: 0, y: -50 }}
+            initial={{ opacity: 0, y: -30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.6 }}
             className="flex flex-col items-center mb-12"
           >
             <Image
               src="/logo.webp"
               alt="SpinFi Logo"
-              width={120}
-              height={120}
-              className="mb-6"
+              width={160}
+              height={160}
+              className="mb-8 drop-shadow-2xl"
             />
             <h1
-              className="text-5xl md:text-7xl font-bold tracking-tight uppercase font-orbitron"
+              className="text-6xl md:text-8xl font-bold tracking-tighter uppercase font-orbitron"
               style={{
                 color: 'white',
-                letterSpacing: '0.08em'
+                letterSpacing: '0.05em',
+                textShadow: '0 4px 20px rgba(251, 146, 60, 0.3)',
+                WebkitBackgroundClip: 'text',
+                backgroundClip: 'text'
               }}
             >
               SPINFI
@@ -41,18 +44,24 @@ export default function Home() {
 
           {/* Hero Content */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="max-w-2xl"
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="max-w-3xl"
           >
             <h2
-              className="text-3xl md:text-5xl font-bold text-white mb-6 font-orbitron"
+              className="text-4xl md:text-6xl font-bold mb-8 font-orbitron"
+              style={{
+                color: 'white',
+                textShadow: '0 2px 10px rgba(251, 146, 60, 0.2)',
+                letterSpacing: '0.03em'
+              }}
             >
               Spin NFTs, Earn Rewards
             </h2>
             <p
-              className="text-lg md:text-xl text-gray-200 mb-10 leading-relaxed"
+              className="text-xl md:text-2xl text-gray-200 mb-12 leading-relaxed"
+              style={{ color: 'rgba(229, 231, 235, 0.9)' }}
             >
               Revolutionary NFT gacha platform where users spin to win exclusive NFTs
               while depositors earn yield per spin.
@@ -62,15 +71,15 @@ export default function Home() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
             >
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-16 py-8 text-xl font-bold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+                className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-20 py-10 text-xl font-bold hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-2xl hover:shadow-3xl"
                 as={Link}
-                href="/app"
+                href="#"
               >
-                START SPINNING
+                COMING SOON
               </Button>
             </motion.div>
           </motion.div>
@@ -79,10 +88,11 @@ export default function Home() {
         {/* Footer */}
         <footer className="absolute bottom-8 left-0 right-0 text-center">
           <p className="text-gray-400 text-sm">
-            © 2024 SpinFi. All rights reserved.
+            © {new Date().getFullYear()} SpinFi. All rights reserved.
           </p>
         </footer>
       </section>
-    </div>
+
+      </div>
   );
 }

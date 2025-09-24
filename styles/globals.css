@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@config "../tailwind.config.js";
+
 body {
   background: url('/background.webp') center/cover no-repeat fixed;
   min-height: 100vh;
