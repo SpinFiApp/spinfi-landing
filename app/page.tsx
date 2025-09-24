@@ -8,9 +8,6 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className="relative overflow-hidden">
-      {/* Background */}
-      <div className="fixed inset-0 bg-black/20" style={{ zIndex: 0 }} />
-
       {/* Hero Section */}
       <section className="relative z-10 min-h-screen flex flex-col items-center justify-center px-4 py-12 md:py-24" style={{ zIndex: 2 }}>
         <div className="flex flex-col items-center max-w-5xl mx-auto text-center">
@@ -50,7 +47,7 @@ export default function Home() {
             className="max-w-3xl"
           >
             <h2
-              className="text-4xl md:text-6xl font-bold mb-8 font-orbitron"
+              className="text-2xl md:text-3xl font-bold mb-8 font-orbitron"
               style={{
                 color: 'white',
                 textShadow: '0 2px 10px rgba(251, 146, 60, 0.2)',
@@ -67,32 +64,26 @@ export default function Home() {
               while depositors earn yield per spin.
             </p>
 
-            {/* CTA Button */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+            <Button
+              as={Link}
+              href="https://x.com/SpinFiApp"
+              target="_blank"
+              rel="noopener noreferrer"
+              size="lg"
+              variant="bordered"
+              className="bg-white/10 hover:bg-white/20 text-white border-white/20 hover:border-white/40 backdrop-blur-sm"
+              startContent={
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+                </svg>
+              }
             >
-              <Button
-                size="lg"
-                className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-20 py-10 text-xl font-bold hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-2xl hover:shadow-3xl"
-                as={Link}
-                href="#"
-              >
-                COMING SOON
-              </Button>
-            </motion.div>
+              Follow @SpinFiApp
+            </Button>
+
           </motion.div>
         </div>
-
-        {/* Footer */}
-        <footer className="absolute bottom-8 left-0 right-0 text-center">
-          <p className="text-gray-400 text-sm">
-            © {new Date().getFullYear()} SpinFi. All rights reserved.
-          </p>
-        </footer>
       </section>
-
-      </div>
+    </div>
   );
 }
