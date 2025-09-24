@@ -5,8 +5,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Development Commands
 
 - **pnpm install** - Install dependencies
-- **pnpm run build** - Build static site for production
 - **pnpm run lint** - Run ESLint with auto-fix
+- **pnpm tsc** - Check TypeScript compilation
+
+**Note**: Never run `pnpm dev` or `pnpm build` - use only the commands above
 
 ## Architecture Overview
 
