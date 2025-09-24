@@ -9,10 +9,21 @@ export const metadata: Metadata = {
     default: "SPINFI",
     template: `%s - SPINFI`,
   },
-  description: "SPINFI - Revolutionary crypto trading platform",
+  description: "SPINFI - NFT Gacha Platform: Spin to win exclusive NFTs while depositors earn yield per spin",
   icons: {
-    icon: "/favicon.ico",
+    icon: [
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+    other: [
+      { rel: 'manifest', url: '/site.webmanifest' },
+    ],
   },
+  manifest: '/site.webmanifest',
 };
 
 export const viewport: Viewport = {
@@ -32,7 +43,7 @@ export default function RootLayout({
       <head />
       <body
         className={clsx(
-          "min-h-screen text-transparent font-sans antialiased",
+          "text-transparent font-sans antialiased",
           fontSans.variable,
           fontOrbitron.className,
         )}
