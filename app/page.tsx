@@ -10,6 +10,12 @@ export default function Home() {
     <div className="relative overflow-hidden">
       {/* Hero Section */}
       <section className="relative z-10 min-h-screen flex flex-col items-center justify-center px-4 py-12 md:py-24" style={{ zIndex: 2 }}>
+        <div className="absolute top-6 right-6">
+          <span className="inline-block bg-yellow-500/20 text-yellow-400 px-4 py-2 rounded-full text-sm font-semibold uppercase tracking-wider border border-yellow-500/30">
+            Under Construction
+          </span>
+        </div>
+
         <div className="flex flex-col items-center max-w-5xl mx-auto text-center">
           {/* Logo and Brand */}
           <motion.div
@@ -26,7 +32,7 @@ export default function Home() {
               className="mb-8 drop-shadow-2xl"
             />
             <h1
-              className="text-6xl md:text-8xl font-bold tracking-tighter uppercase font-orbitron"
+              className="text-6xl md:text-8xl font-bold tracking-tighter uppercase font-orbitron whitespace-nowrap"
               style={{
                 color: 'white',
                 letterSpacing: '0.05em',
@@ -46,20 +52,20 @@ export default function Home() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="max-w-3xl"
           >
-            <h2
-              className="text-2xl md:text-3xl font-bold mb-8 font-orbitron"
-              style={{
-                color: 'white',
-                textShadow: '0 2px 10px rgba(251, 146, 60, 0.2)',
-                letterSpacing: '0.03em'
-              }}
-            >
-              Spin NFTs, Earn Rewards
-            </h2>
-            <p
-              className="text-xl md:text-2xl text-gray-200 mb-12 leading-relaxed"
-              style={{ color: 'rgba(229, 231, 235, 0.9)' }}
-            >
+          <h2
+            className="text-2xl md:text-3xl font-bold mb-6 font-orbitron"
+            style={{
+              color: 'white',
+              textShadow: '0 2px 10px rgba(251, 146, 60, 0.2)',
+              letterSpacing: '0.03em'
+            }}
+          >
+            Spin NFTs, Earn Rewards
+          </h2>
+          <p
+            className="text-xl md:text-2xl text-gray-200 mb-12 leading-relaxed"
+            style={{ color: 'rgba(229, 231, 235, 0.9)' }}
+          >
               Revolutionary NFT gacha platform where users spin to win exclusive NFTs
               while depositors earn yield per spin.
             </p>
