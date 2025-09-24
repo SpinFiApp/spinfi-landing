@@ -6,3 +6,18 @@ body {
   background: url('/background.webp') center/cover no-repeat fixed;
   min-height: 100vh;
 }
+
+/* Mobile background fix: disable fixed attachment to avoid jank */
+@media (max-width: 768px) {
+  body {
+    background-attachment: scroll;
+  }
+}
+
+/* Neon text glow for headings */
+.neon-text {
+  text-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.2),
+    0 4px 18px rgba(45, 212, 191, 0.45),
+    0 10px 38px rgba(96, 165, 250, 0.35);
+}

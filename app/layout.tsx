@@ -43,9 +43,10 @@ export default function RootLayout({
       <head />
       <body
         className={clsx(
-          "text-transparent font-sans antialiased",
+          "text-foreground font-orbitron antialiased",
+          // Keep both variables available
           fontSans.variable,
-          fontOrbitron.className,
+          fontOrbitron.variable,
         )}
       >
         {children}
