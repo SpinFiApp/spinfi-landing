@@ -1,6 +1,6 @@
 "use client";
-import { Button as BaseButton } from "@heroui/react";
-import { extendVariants } from "@heroui/react";
+import { Button as BaseButton } from "@heroui/button";
+import { extendVariants } from "@heroui/system";
 
 export const BrandButton = extendVariants(BaseButton, {
   variants: {
